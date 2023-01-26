@@ -89,7 +89,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
           cache: yarn
 
       - name: Install all yarn packages
@@ -228,6 +228,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOYER_STAGE_AND_DEV_AWS_SECRET_ACCESS_KEY }}
 
           DEPLOYER_ELASTICSEARCH_URL: ${{ secrets.DEPLOYER_STAGE_ELASTICSEARCH_URL }}
+
+          KEVEL_SITE_ID: ${{ secrets.DEPLOYER_STAGE_KEVEL_SITE_ID }}
+          KEVEL_NETWORK_ID: ${{ secrets.DEPLOYER_STAGE_KEVEL_NETWORK_ID }}
 
         run: |
 
